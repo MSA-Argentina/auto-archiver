@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="block", ATTRS{idVendor}=="0480", ATTRS{idProduct}=="a004", ENV{DEVTYPE}=="partition", RUN+="/opt/backup/run.sh"
+
