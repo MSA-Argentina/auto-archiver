@@ -7,6 +7,7 @@
 . /opt/backup/config.ini
 
 backup() {
+
     if [ -z "$DEVNAME" ]
     then
         echo Environment Var \$DEVNAME not found. >> $LOGFILE
@@ -33,6 +34,8 @@ backup() {
     echo "Exit..." >> $LOGFILE
 }
 
+
+# Lock execution
 if [ ! -e "$LOCKFILE" ]
 then
     echo $$ >"$LOCKFILE"
